@@ -26,7 +26,7 @@ The following packages are required by sitrack-test
 $ tree
 ├── config
 ├── helpers
-├── main.py
+├── app.py
 └── README.md
 ```
 

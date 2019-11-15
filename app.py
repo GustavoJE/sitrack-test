@@ -83,6 +83,9 @@ class AlphabetSoup(Resource):
 
         word_soup_string = ""
         oid = ObjectId(id)
+
+        # TODO: add validation of object id, if fail then send error message
+
         query = list(mycollection.find({"_id": oid},{"words":0,"_id":0}))
         data = {"soup": query[0]["soup"]}
 
@@ -103,6 +106,9 @@ class WordList(Resource):
     def get(self,id):
 
         oid = ObjectId(id)
+
+        # TODO: add validation of object id, if fail then send error message
+
         query = list(mycollection.find({"_id": oid},{"soup":0,"_id":0}))
         data = {"words": query[0]["words"]}
 
